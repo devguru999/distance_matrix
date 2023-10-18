@@ -31,14 +31,13 @@ const TrafficWidget = () => {
         // const pos = evt.target.value.split(",")
         // setLatitude(parseFloat(pos[0]));
         // setLongitude(parseFloat(pos[1]));
-        var requestOptions = {
+        let requestOptions = {
             method: 'GET',
             redirect: 'follow'
         };
           
-        fetch(`https://api.distancematrix.ai/maps/api/distancematrix/json
-        ?origins=${latitude},${longitude}&destinations=${evt.target.value}
-        &key=8wgWs28VBCU32pBTzmzgPJfbes3gMiyRXu4usNy3Qg4otPmmLWQurFATasbJxbuD`, requestOptions)
+        const url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${latitude},${longitude}&destinations=${evt.target.value}&key=8wgWs28VBCU32pBTzmzgPJfbes3gMiyRXu4usNy3Qg4otPmmLWQurFATasbJxbuD`;
+        fetch(decodeURIComponent(url), requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
