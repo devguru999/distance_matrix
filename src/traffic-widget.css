@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Sansa Light';
+    src: url('font/sansasoft-std-light.otf') format('opentype');
+}
+#traffic-widget {
+    font-family: 'Sansa Light';
+    background-color: white;
+    max-width: 450px;
+    min-width: 320px;
+    padding: 12px;
+    color: #707070
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    color: #707070;
+    border-bottom: 1px dashed #707070;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+/* .col {
+    width: 100%;
+} */
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-start {
+    align-self: flex-start;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.content {
+    border-bottom: 1px solid black;
+    margin: 7px 0;
+}
+
+.icon {
+    max-width: 120px;
+    margin-right: 12px;
+}
+
+.main-title {
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem;
+    padding: 7px 0;
+}
+
+.sub-title {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.values-time {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #cb3129;
+    padding: 7px 0;
+}
+
+.description {
+    font-size: 1rem;
+    color: #a7c451;
+    text-align: left;
+    line-height: 1.5rem;
+    padding: 12px 0;
+    margin: 7px 0;
+}
+
+.values-dist {
+    font-size: 1rem;
+}
+
+.control > a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #707070;
+}
+
+.control-pad .title {
+    color: #707070;
+    font-size: 1.3rem;
+    padding: 7px 0;
+}
+
+.control-pad input {
+    padding: 7px 12px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border-color: #707070;
+    border-width: 1px;
+    width: 90%;
+}
+.control-pad select {
+    padding: 7px 12px;
+    margin: 6px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border-color: #707070;
+    border-width: 1px;
+    width: 97%;
+}
+
+p {
+    font-size: 1rem;
+}
