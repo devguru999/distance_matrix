@@ -41,7 +41,8 @@ const TrafficWidget = () => {
             .then(response => response.text())
             .then(result => {
                 const json = JSON.parse(result);
-                const element = json["rows"]["elements"][0];
+                console.log(json)
+                const element = json["rows"][0]["elements"][0];
                 setDuration(element["duration"]["text"]);
                 setDistance(element["distance"]["text"]);
             })
