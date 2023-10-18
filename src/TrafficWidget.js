@@ -5,8 +5,8 @@ import Marker from './image/marker.png'
 import Routing from './image/routing.png'
 
 const TrafficWidget = () => {
-    const [longitude, setLongitude] = useState("None");
-    const [latitude, setLatitude] = useState("None");
+    const [longitude, setLongitude] = useState("45.464664");
+    const [latitude, setLatitude] = useState("9.188540");
     const [destination, setDestination] = useState('Uffici J&J Whitemoon');
     const [arriveTime, setArriveTime] = useState('0 min');
     const [distance, setDistance] = useState('0 km');
@@ -17,8 +17,8 @@ const TrafficWidget = () => {
     useEffect(() => {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition((position) => {
-            setLatitude(position.coords.latitude);
-            setLongitude(position.coords.longitude);
+                setLatitude(position.coords.latitude);
+                setLongitude(position.coords.longitude);
             });
         } else {
             console.log("Geolocation is not supported by this browser.");
