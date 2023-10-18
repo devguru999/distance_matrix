@@ -8,7 +8,7 @@ const TrafficWidget = () => {
     const [longitude, setLongitude] = useState("9.188540");
     const [latitude, setLatitude] = useState("45.464664");
     const [destination, setDestination] = useState('Uffici J&J Whitemoon');
-    const [arriveTime, setArriveTime] = useState('0 min');
+    const [duration, setDuration] = useState('0 min');
     const [distance, setDistance] = useState('0 km');
 
     const [showControl, setShowControl] = useState(false);
@@ -39,7 +39,12 @@ const TrafficWidget = () => {
         const url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${latitude},${longitude}&destinations=${evt.target.value}&key=8wgWs28VBCU32pBTzmzgPJfbes3gMiyRXu4usNy3Qg4otPmmLWQurFATasbJxbuD`;
         fetch(decodeURIComponent(url), requestOptions)
             .then(response => response.text())
-            .then(result => console.log(result))
+            .then(result => {
+                const json = JSON.parse(result);
+                const element = json["rows"]["elements"][0];
+                setDuration(element["duration"]["text"]);
+                setDistance(element["distance"]["text"]);
+            })
             .catch(error => console.log('error', error));
     }
 
@@ -57,7 +62,7 @@ const TrafficWidget = () => {
                             <div className="sub-title">tramite Via Cenisio</div>
                         </div>
                         <div className="col values text-right">
-                            <div className="values-time">{arriveTime}</div>
+                            <div className="values-time">{duration}</div>
                             <div className="values-dist">{distance}</div>
                         </div>
                     </div>
