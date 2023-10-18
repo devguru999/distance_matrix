@@ -5,8 +5,8 @@ import Marker from './image/marker.png'
 import Routing from './image/routing.png'
 
 const TrafficWidget = () => {
-    const [longitude, setLongitude] = useState("45.464664");
-    const [latitude, setLatitude] = useState("9.188540");
+    const [longitude, setLongitude] = useState("9.188540");
+    const [latitude, setLatitude] = useState("45.464664");
     const [destination, setDestination] = useState('Uffici J&J Whitemoon');
     const [arriveTime, setArriveTime] = useState('0 min');
     const [distance, setDistance] = useState('0 km');
