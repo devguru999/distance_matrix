@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "title": "Aeroporto di Milano Malpensa",
+        "pos": "45.6301,8.7255"
+    },
+    {
+        "id": 1,
+        "title": "Stazione Centrale, Milano MI",
+        "pos": "45.4840,9.2061"
+    },
+    {
+        "id": 2,
+        "title": "MAISON MOSCHINO",
+        "pos": "45.480942,9.19008"
+    },
+    {
+        "id": 3,
+        "title": "Corso Garibaldi",
+        "pos": "45.475012,9.18351"
+    },
+    {
+        "id": 4,
+        "title": "Bento Sushi Restaurant",
+        "pos": "45.47855,9.185298"
+    },
+    {
+        "id": 5,
+        "title": "Osteria del Corso",
+        "pos": "45.475652,9.183675"
+    },
+    {
+        "id": 6,
+        "title": "Ristorante convivium",
+        "pos": "45.469219,9.185316"
+    },
+    {
+        "id": 7,
+        "title": "Grand Hotel Et De Milan",
+        "pos": "45.470033,9.192756"
+    },
+    {
+        "id": 8,
+        "title": "Armani Caffe",
+        "pos": "45.470914,9.19357"
+    },
+    {
+        "id": 9,
+        "title": "Céline",
+        "pos": "45.469326,9.193816"
+    },
+    {
+        "id": 10,
+        "title": "10 Corso Como",
+        "pos": "45.48184,9.187216"
+    }
+]

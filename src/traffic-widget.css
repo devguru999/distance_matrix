@@ -2,21 +2,22 @@
     font-family: 'Sansa Light';
     src: url('font/sansasoft-std-light.otf') format('opentype');
 }
+
 #traffic-widget {
     font-family: 'Sansa Light';
     background-color: white;
     max-width: 450px;
-    min-width: 320px;
+    min-width: 350px;
     padding: 12px;
     color: #707070
 }
 
 h2 {
     margin: 0;
-    padding: 0;
+    padding: 7px 0;
     color: #707070;
     border-bottom: 1px dashed #707070;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -53,7 +54,13 @@ h2 {
     text-align: right;
 }
 
-.content {
+.rw-widget {
+    text-align: left;
+    font-size: 0.7rem;
+    margin-bottom: 7px;
+}
+
+.carousel {
     border-bottom: 1px solid black;
     margin: 7px 0;
 }
@@ -63,66 +70,68 @@ h2 {
     margin-right: 12px;
 }
 
-.main-title {
+.slide img {
+    width: 48px;
+}
+
+.slide .main-title {
     font-weight: bold;
     color: black;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 7px 0;
 }
 
-.sub-title {
+.slide .sub-title {
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
-.values-time {
+.slide .values-time {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #cb3129;
-    padding: 7px 0;
+    padding: 3px 0;
 }
 
-.description {
-    font-size: 1rem;
+.slide .values-dist {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.slide .description {
+    font-size: 0.7rem;
     color: #a7c451;
     text-align: left;
     line-height: 1.5rem;
     padding: 12px 0;
-    margin: 7px 0;
 }
 
-.values-dist {
-    font-size: 1rem;
-}
-
-.control > a {
-    font-size: 1rem;
+.control  a {
+    font-size: 0.6rem;
     text-decoration: none;
     color: #707070;
+    float: right;
+    padding: 3px 0;
 }
 
-.control-pad .title {
-    color: #707070;
-    font-size: 1.3rem;
+.control .title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
     padding: 7px 0;
+    margin-bottom: 12px;
 }
 
-.control-pad input {
-    padding: 7px 12px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border-color: #707070;
-    border-width: 1px;
-    width: 90%;
+.control-pad a {
+    color: #a7c451;
 }
-.control-pad select {
+
+.control-pad .button {
     padding: 7px 12px;
-    margin: 6px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border-color: #707070;
-    border-width: 1px;
-    width: 97%;
+    background-color: #a7c451;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 7px;
 }
 
 p {

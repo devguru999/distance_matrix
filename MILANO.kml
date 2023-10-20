@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>MILANO</name>
+    <description>Favourite places </description>
+    <Style id="icon-101-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/101-pink-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-101-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/101-pink-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-101">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-101-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-101-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>MAISON MOSCHINO</name>
+        <description>It’s a gorgeous building from the outside. But the true adventure starts when you step in. Every room is designed after a fairy tale. The location of the hotel couldn’t be any better. It’s 10 min walking distance from my favourite store in Milano: 10 corso como. It’s also very close by to Corso Garibaldi, where there are very cosy, chilled restaurants and cafés.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            9.19008,45.480942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Corso Garibaldi</name>
+        <description>A region where there are very cosy, chilled restaurants and cafés;)</description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.18351,45.475012,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bento Sushi Restaurant</name>
+        <description>Great sushi restaurant in the area Corso Garibaldi</description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.185298,45.47855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Osteria del Corso</name>
+        <description>Great restaurant in the area Corso Garibaldi</description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.183675,45.475652,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ristorante convivium</name>
+        <description><![CDATA[Awesome restaurant with typical Italian cuisine. Not so expensive at all! Really delicious main courses and the deserts are to die for! They have an area where they expose all the available deserts, it's a mouth watering scene;) The stuff hardly ever speak any other language but Italian. However, they are friendly;)]]></description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.185316,45.469219,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grand Hotel Et De Milan</name>
+        <description><![CDATA[I sat by this hotel's café, just on the opposite of Armani Caffe. They have a great vine selection and tasty snacks. I also like the retro, homy decoration. I asked our waiter to recommend us the best patisseries in the town. He did recommend two. Frustratingly I can neither recall their names nor seem to be able to find them on the map...]]></description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.192756,45.470033,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Armani Caffe</name>
+        <description><![CDATA[Great cocktails, and tasty snacks! The bathroom s were very cool on their own. It's quite dark in there but just about enough light to be still comfortable. You just have to see it, great indoor design;)]]></description>
+        <styleUrl>#icon-101</styleUrl>
+        <Point>
+          <coordinates>
+            9.19357,45.470914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Céline</name>
+        <description><![CDATA[Via Monte Napoleone, 25, 20121 Milano, Italy<br><br> I'm quite into Céline lately, owing it probably to Phoebe Philo. Of course I went there when I was in Milan. Very cool store and also very friendly sales' team.]]></description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.193816,45.469326,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10 Corso Como</name>
+        <description>One of my favourite shops in the world. A great selection of shoes, clothes, bags and jewellery. Alaïa shoes and dresses, Balmain jackets are to die for! Upstairs there is also a great fashion coffee table book store and an art gallery. You can easily spend there hours. The down side: very depressing looking store workers.</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.187216,45.48184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

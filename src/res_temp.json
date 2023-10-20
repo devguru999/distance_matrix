@@ -1,0 +1,28 @@
+{
+    "destination_addresses": [
+        "Casorezzo, 20003 Metropolitan City of Milan, Italy"
+    ],
+    "origin_addresses": [
+        "P.za del Duomo, 17, 20121 Milano MI, Italy"
+    ],
+    "rows": [
+        {
+            "elements": [
+                {
+                    "distance": {
+                        "text": "31.3 km",
+                        "value": 31299
+                    },
+                    "duration": {
+                        "text": "42 mins",
+                        "value": 2535
+                    },
+                    "origin": "45.464664,9.188540",
+                    "destination": "45.5234,8.9234",
+                    "status": "OK"
+                }
+            ]
+        }
+    ],
+    "status": "OK"
+}
