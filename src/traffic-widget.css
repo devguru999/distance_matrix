@@ -70,35 +70,44 @@ h2 {
     margin-right: 12px;
 }
 
-.slide img {
+.carousel .slide-thumb img {
     width: 48px;
 }
 
-.slide .main-title {
+.carousel .control-dots .dot {
+    background-color: #707070;
+}
+
+.slide-thumb {
+    margin-bottom: 35px;
+}
+
+.slide-thumb .main-title {
+    text-align: left;
     font-weight: bold;
     color: black;
     font-size: 1rem;
     padding: 7px 0;
 }
 
-.slide .sub-title {
+.slide-thumb .sub-title {
     text-align: left;
     font-size: 0.6rem;
 }
 
-.slide .values-time {
+.slide-thumb .values-time {
     font-weight: bold;
     font-size: 1.2rem;
     color: #cb3129;
     padding: 3px 0;
 }
 
-.slide .values-dist {
+.slide-thumb .values-dist {
     font-size: 0.8rem;
     font-weight: bold;
 }
 
-.slide .description {
+.slide-thumb .description {
     font-size: 0.7rem;
     color: #a7c451;
     text-align: left;

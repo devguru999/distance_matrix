@@ -17,17 +17,31 @@ const DirectionEdit = ({start, end, onChange}) => {
         setAddresses(Addresses);
     }, [])
 
-    const handleOptionChange = async (val) => {
+    const handleOptionChange = (val) => {
         if (!val) {
             onChange(null);
         } else {
+            if (!startPoint || !destination) return;
+
             const requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
             };
+
             const url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${startPoint["pos"]}&destinations=${destination["pos"]}&key=8wgWs28VBCU32pBTzmzgPJfbes3gMiyRXu4usNy3Qg4otPmmLWQurFATasbJxbuD`;
-            const response = await fetch(decodeURIComponent(url), requestOptions);
-            onChange(response);
+            fetch(decodeURIComponent(url), requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                const json = JSON.parse(result);
+                const element = json["rows"][0]["elements"][0];
+                onChange({
+                    "startPoint": startPoint["title"],
+                    "destination": destination["title"],
+                    "duration": element["duration"]["text"],
+                    "distance": element["distance"]["text"]
+                })
+            })
+            .catch(error => onChange(error));
         }
     }
 

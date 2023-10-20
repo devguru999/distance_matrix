@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
+
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 import "react-widgets/styles.css";
 
@@ -10,45 +13,40 @@ import DirectionEdit from "./DirectionEdit";
 
 const TrafficWidget = () => {
     const [routes, setRoutes] = useState([]);
-    const [longitude, setLongitude] = useState("9.188540");
-    const [latitude, setLatitude] = useState("45.464664");
-    const [destination, setDestination] = useState('Uffici J&J Whitemoon');
-    const [duration, setDuration] = useState('0 min');
-    const [distance, setDistance] = useState('0 km');
-
     const [showControl, setShowControl] = useState(false);
-    const [selectedOption, setSelectedOption] = useState("");
-
-    useEffect(() => {
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                setLatitude(position.coords.latitude);
-                setLongitude(position.coords.longitude);
-            });
-        } else {
-            console.log("Geolocation is not supported by this browser.");
-        }
-    }, []);
 
     const handleOptionChange = (val) => {
-        console.log(val);
-        // setDestination(evt.target.options[evt.target.selectedIndex].text)
-        // setSelectedOption(evt.target.value)
-        // const pos = evt.target.value.split(",")
-        // setLatitude(parseFloat(pos[0]));
-        // setLongitude(parseFloat(pos[1]));           
-        
+        if (val && val.destination) {
+            for (let i in routes) {
+                if (routes[i].startPoint == val.startPoint &&
+                    routes[i].destination == val.destination)
+                    return;
+            }
+            setRoutes([...routes, val]);
+        }
     }
 
     return (
         <div id="traffic-widget">
             <h2>DIRECTIONS</h2>
-            <div className="row carousel">
-                <DirectionSlide
-                    icon={Marker}
-                    dest={destination}
-                    dura={duration}
-                    dist={distance} />
+            <div className="carousel-container">
+                <Carousel 
+                    interval={2000}
+                    autoPlay={true}
+                    showThumbs={false}
+                    showArrows={false}
+                    showStatus={false}>
+                {
+                routes.map((route, index) => (
+                    <DirectionSlide
+                        key={index}
+                        icon={Marker}
+                        dest={route.destination}
+                        dura={route.duration}
+                        dist={route.distance} />
+                    ))
+                }                
+                </Carousel>                
             </div>
             <div className="control">
                 { !showControl &&

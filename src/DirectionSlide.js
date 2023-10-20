@@ -1,6 +1,6 @@
 const DirectionSlide = ({icon, dest, dura, dist}) => {
     return (
-        <div className="row slide">
+        <div className="row slide-thumb">
             <div className="col icon">
                 <img src={icon}></img>
             </div>
