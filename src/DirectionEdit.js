@@ -1,27 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 import { DropdownList } from "react-widgets"
 
-import Addresses from "./address.json"
 import Routing from './image/routing.png'
 
-const DirectionEdit = ({start, end, onChange}) => {   
+const DirectionEdit = ({addresses, start, end, onChange}) => {   
     const [startPoint, setStartPoint] = useState(start);
     const [destination, setDestination] = useState(end);
-    const [addresses, setAddresses] = useState([]);
-
-    useEffect(() => {
-        setAddresses(Addresses);
-    }, [])
 
     const handleOptionChange = (val) => {
         if (!val) {
             onChange(null);
-        } else {
-            if (!startPoint || !destination) return;
+        } else {            
+            if (!startPoint || !destination) return;       
 
             const requestOptions = {
                 method: 'GET',
