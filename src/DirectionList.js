@@ -2,6 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faPenToSquare, faClose } from '@fortawesome/free-solid-svg-icons'
 
+import Marker from './image/marker.png'
+
 const DirectionList = ({routes, onChange}) => {
     const handleOptionChange = (val) => {
         onChange(val)
@@ -16,8 +18,14 @@ const DirectionList = ({routes, onChange}) => {
             <div className="direction-list">
                 {
                 routes.map((route, index) => (
-                    <div className="row list-item flex-between flex-middle" id={index}>
-                        <div className="destination">{route.destination}</div>
+                    <div className="row list-item flex-middle" id={index}>
+                        <div className='icon'>
+                            <img src={Marker} alt="icon" width="24px" height="24px"/>
+                        </div>
+                        <div className="destination">
+                            <span>{route.destination}</span>
+                        </div>
+                        <div className='flex-grow'></div>
                         <div>
                             <a href="#" onClick={()=> handleOptionChange({...route, action: "edit"})}>
                                 <FontAwesomeIcon icon={faPenToSquare} />

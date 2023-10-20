@@ -158,6 +158,10 @@ h2 {
     margin-bottom: 7px;
 }
 
+.list-item .icon {
+    margin-right: 7px;
+}
+
 .list-item a {
     float: left;
 }
