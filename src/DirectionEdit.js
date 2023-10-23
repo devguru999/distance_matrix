@@ -116,6 +116,10 @@ const DirectionEdit = ({addresses, start, end, onChange}) => {
                     })
                     .catch(error => console.log('error', error));
             }   
+
+            if (!loadCount) {
+                calculateEstimation();
+            }
         }
     }
 
