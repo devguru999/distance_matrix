@@ -23,6 +23,10 @@ const TrafficWidget = () => {
 
     useEffect(() => {
         setAddresses(Addresses);
+        const storedRoutes = localStorage.getItem('routes');
+        if (storedRoutes) {
+            setRoutes(JSON.parse(storedRoutes));
+        }
     }, [])
 
     const handleOptionChange = (val) => {
@@ -40,15 +44,10 @@ const TrafficWidget = () => {
                     }
                     return route;
                 }));
-                console.log(routes.map(route => {
-                    if (route.startPoint === selectedRoute.startPoint &&
-                        route.destination === selectedRoute.destination) {
-                        return val;
-                    }
-                    return route;
-                }));
+                localStorage.setItem("routes", JSON.stringify(routes));
             } else {
                 setRoutes([...routes, val]);
+                localStorage.setItem("routes", JSON.stringify(routes));
             }
             setSelectedRoute(null);
             setShowEdit(false);
@@ -67,7 +66,8 @@ const TrafficWidget = () => {
                 delete val.action;
                 setRoutes(routes.filter(route => 
                     route.startPoint !== val.startPoint || 
-                    route.destination !== val.destination));
+                    route.destination !== val.destination));                
+                localStorage.setItem("routes", JSON.stringify(routes));
             } else if (val.action === "edit") {
                 delete val.action;
                 setSelectedRoute(val);
@@ -96,14 +96,12 @@ const TrafficWidget = () => {
                         dist={route.distance} />
                     ))
                 }                
-                </Carousel>                
+                </Carousel>         
+                <div className="row flex-end">
+                    <a href="#" onClick={() => setShowControl(!showControl)}>MANAGE DESTINATION</a>
+                </div>
             </div>
             <div className="control">
-                { !showControl &&
-                <div className="row flex-end">
-                    <a href="#" onClick={() => setShowControl(true)}>MANAGE DESTINATION</a>
-                </div>
-                }
                 { showControl && showEdit &&
                 <DirectionEdit 
                     addresses={addresses}

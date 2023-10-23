@@ -18,7 +18,7 @@ const DirectionList = ({routes, onChange}) => {
             <div className="direction-list">
                 {
                 routes.map((route, index) => (
-                    <div className="row list-item flex-middle" id={index}>
+                    <div className="row list-item flex-middle" key={index}>
                         <div className='icon'>
                             <img src={Marker} alt="icon" width="24px" height="24px"/>
                         </div>
@@ -38,7 +38,7 @@ const DirectionList = ({routes, onChange}) => {
                 ))
                 }
             </div>            
-            <a className='button' href='#' onClick={() => handleOptionChange("route")}>SAVE CHANGES</a>
+            {/* <a className='button' href='#' onClick={() => handleOptionChange("route")}>SAVE CHANGES</a> */}
         </div>
     )
 }

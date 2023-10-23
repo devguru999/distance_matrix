@@ -64,7 +64,11 @@ h2 {
     margin-bottom: 7px;
 }
 
-.carousel {
+.rw-input-addon, .rw-input-addon.rw-picker-btn {
+    border-left: none;
+}
+
+.carousel-container {
     border-bottom: 1px solid black;
     margin: 7px 0;
 }
@@ -83,7 +87,7 @@ h2 {
 }
 
 .slide-thumb {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .slide-thumb .main-title {
@@ -119,12 +123,23 @@ h2 {
     padding: 12px 0;
 }
 
-.control  a {
+.carousel-container  a {
     font-size: 0.6rem;
     text-decoration: none;
     color: #707070;
     float: right;
     padding: 3px 0;
+}
+
+/* .control {
+    overflow: hidden;
+    transition: height 3s ease;
+} */
+
+.control a {
+    font-size: 0.6rem;
+    text-decoration: none;
+    float: right;
 }
 
 .control .title {
