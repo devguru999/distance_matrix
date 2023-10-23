@@ -33,6 +33,11 @@ const TrafficWidget = () => {
         localStorage.setItem("routes", JSON.stringify(routes));
     }, [routes])
 
+    useEffect(() => {
+        if (!routes.length)
+            setShowEdit(true)
+    }, [showEdit, showControl])
+
     const handleOptionChange = (val) => {
         if (val && val.destination) {
             for (let i in routes) {
