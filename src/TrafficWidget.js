@@ -29,6 +29,10 @@ const TrafficWidget = () => {
         }
     }, [])
 
+    useEffect(() => {
+        localStorage.setItem("routes", JSON.stringify(routes));
+    }, [routes])
+
     const handleOptionChange = (val) => {
         if (val && val.destination) {
             for (let i in routes) {
@@ -44,10 +48,8 @@ const TrafficWidget = () => {
                     }
                     return route;
                 }));
-                localStorage.setItem("routes", JSON.stringify(routes));
             } else {
                 setRoutes([...routes, val]);
-                localStorage.setItem("routes", JSON.stringify(routes));
             }
             setSelectedRoute(null);
             setShowEdit(false);
@@ -67,7 +69,6 @@ const TrafficWidget = () => {
                 setRoutes(routes.filter(route => 
                     route.startPoint !== val.startPoint || 
                     route.destination !== val.destination));                
-                localStorage.setItem("routes", JSON.stringify(routes));
             } else if (val.action === "edit") {
                 delete val.action;
                 setSelectedRoute(val);
