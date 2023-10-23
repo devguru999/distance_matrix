@@ -7,7 +7,7 @@ import { Combobox } from "react-widgets"
 
 import Routing from './image/routing.png'
 
-const DirectionEdit = ({addresses, start, end, onChange}) => {   
+const DirectionEdit = ({addresses, setAddresses, start, end, onChange}) => {   
     const [startPoint, setStartPoint] = useState(start);
     const [destination, setDestination] = useState(end);
     const [isLoading, setIsLoading] = useState(false);
@@ -87,11 +87,15 @@ const DirectionEdit = ({addresses, start, end, onChange}) => {
                         const address = json.result[0].formatted_address;
                         const geometry = json.result[0].geometry.location;
                         const pos = geometry.lat + "," + geometry.lng;
-                        setStartPoint({                        
-                            id: 12,
+                        const newAddress = {                        
+                            id: addresses.length,
                             title: address,
                             pos: pos
-                        })
+                        };
+                        setStartPoint(newAddress)
+                        if (address !== '') {
+                            setAddresses([...addresses, newAddress])
+                        }
                         setLoadCount(loadCount - 1);
                     })
                     .catch(error => console.log('error', error));
@@ -107,11 +111,15 @@ const DirectionEdit = ({addresses, start, end, onChange}) => {
                         const address = json.result[0].formatted_address;
                         const geometry = json.result[0].geometry.location;
                         const pos = geometry.lat + "," + geometry.lng;
-                        setDestination({                        
-                            id: 12,
+                        const newAddress = {                        
+                            id: addresses.length,
                             title: address,
                             pos: pos
-                        })
+                        }
+                        setDestination(newAddress)
+                        if (address !== '') {
+                            setAddresses([...addresses, newAddress])
+                        }
                         setLoadCount(loadCount - 1);
                     })
                     .catch(error => console.log('error', error));
