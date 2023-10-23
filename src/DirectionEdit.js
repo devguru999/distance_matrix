@@ -117,7 +117,7 @@ const DirectionEdit = ({addresses, start, end, onChange}) => {
                     .catch(error => console.log('error', error));
             }   
 
-            if (!loadCount) {
+            if (loadCount == 0 && isLoading == false) {
                 calculateEstimation();
             }
         }
