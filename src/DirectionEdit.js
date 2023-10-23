@@ -117,11 +117,10 @@ const DirectionEdit = ({addresses, start, end, onChange}) => {
                     .catch(error => console.log('error', error));
             }   
 
-            setTimeout(() => {
-                if (loadCount == 0 && isLoading == false) {
-                    calculateEstimation();
-                }
-            }, 300);
+            
+            if (typeof startPoint !== 'string' && typeof destination !== 'string') {
+                calculateEstimation();
+            }
         }
     }
 
