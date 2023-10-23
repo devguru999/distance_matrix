@@ -106,6 +106,7 @@ const TrafficWidget = () => {
                 { showControl && showEdit &&
                 <DirectionEdit 
                     addresses={addresses}
+                    setAddresses={setAddresses}
                     start={selectedRoute?addresses.filter(address =>
                         address.title == selectedRoute.startPoint)[0]:null}
                     end={selectedRoute?addresses.filter(address =>
